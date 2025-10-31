@@ -25,3 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   border-color: oklch(55.6% 0 0);
 }
+
+.font-caveat {
+  font-family: var(--font-caveat-brush);
+}
