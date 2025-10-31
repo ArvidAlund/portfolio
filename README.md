@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+En modern portfolio byggd med **Next.js**, **React**, och **OpenAI API**.  
+Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integration** som kan svara på frågor om mig.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funktioner
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ⚡ **Next.js 15 (App Router)** – snabb och SEO-optimerad.
+- 🎨 **Tailwind CSS** – responsiv och stilren design.
+- 🧠 **ChatGPT-integration** via OpenAI API.
+- 💬 Dynamisk AI-assistent som kan svara på frågor.
+- 📱 Fullt responsiv layout för mobil, surfplatta och desktop.
+- ☁️ Enkel deploy via **Vercel**.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Teknisk stack
 
-## Learn More
+| Teknologi                                | Syfte                                             |
+| ---------------------------------------- | ------------------------------------------------- |
+| [Next.js](https://nextjs.org/)           | Fullstack-ramverk (frontend + backend API routes) |
+| [React](https://react.dev/)              | UI-komponenter                                    |
+| [Tailwind CSS](https://tailwindcss.com/) | Styling                                           |
+| [OpenAI](https://platform.openai.com/)   | AI-anrop (ChatGPT)                                |
+| [Vercel](https://vercel.com/)            | Hosting & deploy                                  |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✅ FAS 1 – Grundläggande struktur
 
-## Deploy on Vercel
+- [x] Initiera projekt med Next.js och Tailwind CSS
+- [] Skapa sidor: `Home`, `About`, `Projects`, `Contact`
+- [] Bygga layout och navigation
+- [] Implementera enkel ChatGPT-integration via API-route
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 FAS 2 – Design & användarupplevelse
+
+- [ ] Förbättra UI med Framer Motion
+- [ ] Implementera Dark Mode
+- [ ] Förbättra responsivitet och prestanda
+- [ ] Finputsning av typografi och färger
+
+---
+
+## 🤖 FAS 3 – AI & funktionalitet
+
+- [ ] Utöka ChatGPT-komponenten med historik och "typing" animation
+- [ ] Låta AI:n svara på frågor om mina projekt och erfarenheter
+- [ ] Möjlighet att generera beskrivningar automatiskt
+
+---
+
+## ☁️ FAS 4 – Backend & data
+
+- [ ] Lägg till databas (ex. Supabase) för projektdata
+- [ ] Admin-gränssnitt för att hantera innehåll
+- [ ] Dynamisk rendering av projekt från databasen
+
+---
+
+## 🌟 FAS 5 – Framtida förbättringar
+
+- [ ] AI-driven CV-sektion
+- [ ] "Chat with my portfolio"–funktion
+- [ ] Generera projektbilder med DALL·E
+- [ ] Flerspråkigt stöd (svenska/engelska)
+
+---
+
+> 💡 _Denna roadmap uppdateras löpande i takt med utvecklingen._
