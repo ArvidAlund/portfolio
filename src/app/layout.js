@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Caveat_Brush } from "next/font/google";
+import { Geist, Geist_Mono, Caveat_Brush, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import ChatBot from "./components/chatbot/chatbot";
@@ -12,6 +12,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets:['latin']
+})
 
 const caveat  = Caveat_Brush({
   variable: "--font-caveat-brush",
@@ -27,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="sv">
       <body
-        className={`${caveat.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${caveat.variable} ${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header/>
         {children}

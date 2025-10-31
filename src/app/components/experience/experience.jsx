@@ -6,11 +6,11 @@ export default function Experience(){
     const [showEducation, setShowEducation] = useState(true);
     return <section className="mt-20">
         <nav className="grid grid-cols-2 text-center bg-[#1f2937] p-1 rounded-md">
-            <button className={`cursor-pointer rounded ${showEducation ? "" : "bg-[#030712]"}`} onClick={() => setShowEducation(false)}>
+            <button className={`cursor-pointer rounded p-1 ${showEducation ? "" : "bg-[#030712]"}`} onClick={() => setShowEducation(false)}>
                 Arbete
             </button>
 
-            <button className={`cursor-pointer rounded ${showEducation ? "bg-[#030712]" : ""}`} onClick={() => setShowEducation(true)}>
+            <button className={`cursor-pointer rounded p-1 ${showEducation ? "bg-[#030712]" : ""}`} onClick={() => setShowEducation(true)}>
                 Utbildning
             </button>
         </nav>
