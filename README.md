@@ -33,9 +33,9 @@ Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integr
 ## ✅ FAS 1 – Grundläggande struktur
 
 - [x] Initiera projekt med Next.js och Tailwind CSS
-- [] Skapa sidor: `Home`, `About`, `Projects`, `Contact`
-- [] Bygga layout och navigation
-- [] Implementera enkel ChatGPT-integration via API-route
+- [ ] Skapa sidor: `Home`, `About`, `Projects`, `Contact`
+- [ ] Bygga layout och navigation
+- [ ] Implementera enkel ChatGPT-integration via API-route
 
 ---
 

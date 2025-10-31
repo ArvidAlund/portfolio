@@ -1,0 +1,26 @@
+.hoverEffectName::before {
+  content: "GitHub";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: hotpink;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hoverEffectName:hover::before {
+  opacity: 1;
+}
+
+.hoverEffectName {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
