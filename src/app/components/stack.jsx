@@ -10,7 +10,7 @@ const stackList = {
   ],
   backend: [
     { name: "Node.js", src: "./svg/backend/nodejs-icon.svg" },
-    { name: "Express.js", src: "./svg/backend/express.svg" },
+    { name: "Express.js", src: "./svg/backend/expressjs.svg" },
     { name: "Python", src: "./svg/backend/python.svg" },
     { name: "Flask", src: "./svg/backend/flask.svg" },
     { name: "MongoDB", src: "./svg/backend/mongodb-icon.svg" },
@@ -46,7 +46,21 @@ export default function TechStack(){
             <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] m-4 gap-2">
                 {stackList.backend.map((item, i) => (
                     <div key={i} className="flex flex-col items-center justify-center">
-                        <img src={item.src} alt="Icon" className="h-8"/>
+                        <img
+                        src={item.name === "Express.js" || item.name === "Flask" ? "" : item.src}
+                        alt=""
+                        className="h-8 w-8 bg-white"
+                        style={{
+                            maskImage: `url(${item.src})`,
+                            WebkitMaskImage: `url(${item.src})`,
+                            maskRepeat: "no-repeat",
+                            WebkitMaskRepeat: "no-repeat",
+                            maskPosition: "center",
+                            WebkitMaskPosition: "center",
+                            maskSize: "contain",
+                            WebkitMaskSize: "contain",
+                        }}
+                        />
                         <p className="text-sm mt-0.5">{item.name}</p>
                     </div>
                 ))}
@@ -57,7 +71,21 @@ export default function TechStack(){
             <div className="flex m-4 justify-between">
                 {stackList.tools.map((item, i) => (
                     <div key={i} className="flex flex-col items-center justify-center">
-                        <img src={item.src} alt="Icon" className="h-8"/>
+                        <img
+                        src={item.name === "GitHub" || item.name === "Vercel" ? "" : item.src}
+                        alt=""
+                        className="h-8 w-8 bg-white"
+                        style={{
+                            maskImage: `url(${item.src})`,
+                            WebkitMaskImage: `url(${item.src})`,
+                            maskRepeat: "no-repeat",
+                            WebkitMaskRepeat: "no-repeat",
+                            maskPosition: "center",
+                            WebkitMaskPosition: "center",
+                            maskSize: "contain",
+                            WebkitMaskSize: "contain",
+                        }}
+                        />
                         <p className="text-sm mt-0.5">{item.name}</p>
                     </div>
                 ))}
