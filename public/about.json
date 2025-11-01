@@ -1,0 +1,59 @@
+{
+  "techStack": {
+    "frontend": [
+      { "name": "HTML5", "src": "./svg/frontend/html-5.svg" },
+      { "name": "CSS3", "src": "./svg/frontend/css-3.svg" },
+      { "name": "SASS", "src": "./svg/frontend/sass.svg" },
+      { "name": "JavaScript", "src": "./svg/frontend/javascript.svg" },
+      { "name": "TypeScript", "src": "./svg/frontend/typescript-icon.svg" },
+      { "name": "React", "src": "./svg/frontend/react.svg" },
+      { "name": "Astro", "src": "./svg/frontend/astro-icon.svg" }
+    ],
+    "backend": [
+      { "name": "Node.js", "src": "./svg/backend/nodejs-icon.svg" },
+      { "name": "Express.js", "src": "./svg/backend/expressjs.svg" },
+      { "name": "Python", "src": "./svg/backend/python.svg" },
+      { "name": "Flask", "src": "./svg/backend/flask.svg" },
+      { "name": "MongoDB", "src": "./svg/backend/mongodb-icon.svg" },
+      { "name": "MySQL", "src": "./svg/backend/mysql-icon.svg" },
+      { "name": "Supabase", "src": "./svg/backend/supabase-icon.svg" }
+    ],
+    "tools": [
+      { "name": "Git", "src": "./svg/tools/git-icon.svg" },
+      { "name": "GitHub", "src": "./svg/tools/github.svg" },
+      { "name": "Postman", "src": "./svg/tools/postman-icon.svg" },
+      { "name": "NPM", "src": "./svg/tools/npm-icon.svg" },
+      { "name": "Vercel", "src": "./svg/tools/vercel-icon.svg" }
+    ]
+  },
+  "education": [
+    {
+      "title": "Nackademin",
+      "undertitle": "Webbutveckling Fullstack open source",
+      "startdate": "Aug 2025",
+      "enddate": "Nuvarande",
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEqz4aqngVcTQ/company-logo_200_200/B4DZehuVOeHMAI-/0/1750764967247/nackademin_yrkeshogskola_logo?e=2147483647&v=beta&t=oy9fBBggHlVU19XHPI3d8pfIE94XCu2G0UIPxZYWB_s",
+      "websiteurl": "https://nackademin.se/",
+      "bulletpoints": [
+        "Fördjupning i moderna JavaScript-ramverk som React och Next.js",
+        "Bygger fullstack-appar med Node, Express och PostgreSQL",
+        "Lär mig arbeta med autentisering, API:er och databasdesign",
+        "Projekt i team med fokus på agila metoder och versionshantering (Git)"
+      ]
+    },
+    {
+      "title": "Nyköpings Gymnasium Gripen",
+      "undertitle": "Teknikprogrammet Info & mediateknik",
+      "startdate": "Aug 2022",
+      "enddate": "Jun 2025",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWFM_rjgMTaL44xi3RwAI8sMP9OnsRbuUizw&s",
+      "websiteurl": "https://www.nykoping.se/nykopings-gymnasium/",
+      "bulletpoints": [
+        "Grunder i programmering, webb och teknik",
+        "Arbete i projektform med fokus på design och digitala lösningar",
+        "Utvecklade intresse för webbutveckling och mjukvarudesign",
+        "Avslutade gymnasiearbete inom webbutveckling"
+      ]
+    }
+  ]
+}

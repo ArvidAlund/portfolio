@@ -1,32 +1,4 @@
-const educationData = [
-    {
-        title:"Nackademin", 
-        undertitle:"Webbutveckling Fullstack open source", 
-        startdate:"Aug 2025", 
-        enddate:"Nuvarande", 
-        logo:"https://media.licdn.com/dms/image/v2/D4D0BAQEqz4aqngVcTQ/company-logo_200_200/B4DZehuVOeHMAI-/0/1750764967247/nackademin_yrkeshogskola_logo?e=2147483647&v=beta&t=oy9fBBggHlVU19XHPI3d8pfIE94XCu2G0UIPxZYWB_s",
-        websiteurl:"https://nackademin.se/",
-        bulletpoints:[
-        "Fördjupning i moderna JavaScript-ramverk som React och Next.js",
-        "Bygger fullstack-appar med Node, Express och PostgreSQL",
-        "Lär mig arbeta med autentisering, API:er och databasdesign",
-        "Projekt i team med fokus på agila metoder och versionshantering (Git)",
-        ]
-    },{
-        title:"Nyköpings Gymnasium Gripen", 
-        undertitle:"Teknikprogrammet Info & mediateknik", 
-        startdate:"Aug 2022", 
-        enddate:"jun 2025", 
-        logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWFM_rjgMTaL44xi3RwAI8sMP9OnsRbuUizw&s",
-        websiteurl:"https://www.nykoping.se/nykopings-gymnasium/",
-        bulletpoints:[
-        "Grunder i programmering, webb och teknik",
-        "Arbete i projektform med fokus på design och digitala lösningar",
-        "Utvecklade intresse för webbutveckling och mjukvarudesign",
-        "Avslutade gymnasiearbete inom webbutveckling",
-        ]
-    }
-]
+import { useState, useEffect } from "react";
 
 function parseDate(dateStr) {
   if (dateStr.toLowerCase().includes("nuvarande")) {
@@ -41,8 +13,24 @@ function parseDate(dateStr) {
 }
 
 export default function Education(){
-    const sortedData = [...educationData].sort((a, b) => parseDate(b.enddate) - parseDate(a.enddate));
+    const [educationData, setEducationData] = useState();
+    const [sortedData, setSortedData] = useState();
 
+    useEffect(()=>{
+      fetch("/about.json")
+      .then((res) => res.json())
+      .then((data) => setEducationData(data.education))
+    },[])
+
+    useEffect(()=>{
+      if (!educationData) return
+
+      setSortedData([...educationData].sort((a, b) => parseDate(b.enddate) - parseDate(a.enddate)));
+    },[educationData])
+
+    if (!sortedData){
+      return <p className="mt-20 text-neutral-400">Laddar utbildningar...</p>;
+    }
     return <ul className="ml-10 border-l">
         {sortedData.map((edu, i) => (
         <li key={i} className="py-4 ml-10 relative pr-8">
