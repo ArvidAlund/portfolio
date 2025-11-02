@@ -1,0 +1,92 @@
+{
+  "responses": [
+    {
+      "inputs": ["hej", "hejsan", "tja", "tjena", "hallå", "yo", "hello", "hi"],
+      "reply": "Tja! 👋 Kul att du hittade hit — vad vill du veta om mig?"
+    },
+    {
+      "inputs": ["hur mår du", "hur är läget", "allt bra", "hur går det"],
+      "reply": "Jag mår fint tack! Lite upptagen med kod (som vanligt 😅). Själv då?"
+    },
+    {
+      "inputs": ["vad gör du", "vad händer", "vad pysslar du med", "vad håller du på med"],
+      "reply": "Just nu snackar jag med dig 😎 och visar upp lite om vem jag är som utvecklare!"
+    },
+    {
+      "inputs": ["vem är du", "berätta om dig", "vem pratar jag med", "vem är arvid"],
+      "reply": "Jag är Arvid Ålund 👋 en nyfiken webbutvecklare som gillar att skapa snygga, snabba och smarta webblösningar 💻"
+    },
+    {
+      "inputs": ["vad pluggar du", "var pluggar du", "vilken skola går du på", "utbildning", "studier"],
+      "reply": "Jag pluggar Webbutveckling Fullstack Open Source på Nackademin i Stockholm 🎓 – mycket fokus på React, Node och databaser."
+    },
+    {
+      "inputs": ["vad kan du", "vad har du för skills", "tekniker", "tech stack", "språk", "vad kodar du i"],
+      "reply": "Jag jobbar mest med React, Node.js, Express, MongoDB och MySQL 💻 Men jag gillar också att experimentera med nya ramverk som Astro och Next.js 🚀"
+    },
+    {
+      "inputs": ["portfolio", "projekt", "vad har du gjort", "visa projekt", "några projekt"],
+      "reply": "Jag har byggt allt från små appar till fullstack-projekt under utbildningen – du hittar några här på sidan 👇 och fler på min GitHub 🌟"
+    },
+    {
+      "inputs": ["kontakt", "hur når man dig", "mail", "email", "kontakta dig", "linkedin"],
+      "reply": "Du kan alltid nå mig via mail eller LinkedIn 📬 Länkar finns högst upp på sidan!"
+    },
+    {
+      "inputs": ["tack", "tack så mycket", "tackar", "thanks"],
+      "reply": "Tack själv! 🙌 Alltid kul att snacka kod eller portfolio 😄"
+    },
+    {
+      "inputs": ["hejdå", "adjö", "vi ses", "bye", "ses"],
+      "reply": "Ha det bäst! 👋 Hoppas vi hörs igen!"
+    },
+    {
+      "inputs": ["vad använder du för tech", "hur är sidan byggd", "hur gjorde du denna sida", "vilken stack använder du"],
+      "reply": "Den här sidan är byggd med Next.js, React och Tailwind CSS ✨ Hostad på Vercel och helt responsiv, förstås 📱"
+    },
+    {
+      "inputs": ["är du en riktig ai", "är du arvid", "är du chatbot", "är du riktig", "pratar jag med en bot"],
+      "reply": "Haha, jag är typ en digital version av mig själv 😅 Jag svarar som Arvid – fast utan kaffe och sömnbrist ☕💻"
+    },
+    {
+      "inputs": ["vad gillar du", "intressen", "hobby", "vad gör du på fritiden"],
+      "reply": "Utöver att koda? 🎮 Jag gillar att skapa saker, spela lite, och ibland bara nörda ner mig i nya tekniker jag vill lära mig 🚀"
+    },
+    {
+      "inputs": ["favorit språk", "favoritspråk", "bästa språk"],
+      "reply": "Just nu gillar jag JavaScript/TypeScript – det går att bygga nästan vad som helst med det 💪"
+    },
+    {
+      "inputs": ["hur gammal är du", "ålder"],
+      "reply": "Jag är född 2006 😉 Men viktigare: jag är nyfiken och älskar att lära mig nytt!"
+    },
+    {
+      "inputs": ["vad jobbar du med", "jobb", "arbete"],
+      "reply": "Just nu fokuserar jag på mina studier och projekt – men jag är alltid öppen för spännande samarbeten 🤝"
+    },
+    {
+      "inputs": ["har du github", "visa github", "github profil"],
+      "reply": "Japp! Du hittar mig på GitHub via länken på sidan 🔗 Där finns lite kod och projekt jag jobbat på!"
+    },
+    {
+      "inputs": ["roligt", "haha", "lol", "😂"],
+      "reply": "Haha 😄 kul att du tycker det! Man måste ju ha lite humor även i koden!"
+    },
+    {
+      "inputs": ["fint", "snyggt", "cool sida", "bra sida", "grymt"],
+      "reply": "Tack så mycket 🙏 Jag la mycket kärlek på designen – kul att du gillar den!"
+    },
+    {
+      "inputs": ["vad är din favoritdel av kodning", "vad gillar du mest med kodning"],
+      "reply": "När allt *äntligen fungerar* efter en timmes felsökning... det är ren magi 😅✨"
+    },
+    {
+      "inputs": ["lön", "lönen", "vad tjänar man", "hur mycket får man", "vad kan man förvänta sig i lön", "salary"],
+      "reply": [
+        "Jag tänker att en rimlig startlön för en ny fullstackutvecklare ligger runt **33–37 000 kr/mån**, beroende på erfarenhet och var man jobbar 💻",
+        "Jag siktar på en lön någonstans runt **35 000 kr/mån** som ny i branschen — det känns realistiskt för en junior fullstackare i Sverige 👌",
+        "Jag skulle säga mellan **32–38 000 kr/mån** är ett bra spann för en nyutexad utvecklare, lite beroende på företag och stad 🏙️"
+      ]
+    }
+  ]
+}

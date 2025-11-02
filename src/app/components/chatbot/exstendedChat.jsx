@@ -1,25 +1,45 @@
 "use client"
 import { Send } from "lucide-react"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import BotMessage from "./botMessage";
 import UserMessage from "./userMessage";
+import getChatResponse from "@/lib/getChatResponse";
 
 
 export default function ExtendedChat(){
     const [inputValue, setInputValue] = useState("");
     const [convStarted, setConvStarted] = useState(false);
     const [conversation, setConversation] = useState([]);
-    const [botCallStarted, setBotCallStarted] = useState(true);
+    const [botCallStarted, setBotCallStarted] = useState(false);
+    const bottomRef = useRef(null);
 
     useEffect(()=>{
         if (conversation.length !== 0) setConvStarted(true);
     },[conversation])
+
+    useEffect(()=>{
+        if (!botCallStarted) return
+
+        const botRes = async () => {
+            const res = await getChatResponse(conversation[conversation.length - 1].content)
+            setConversation((prev) => [...prev, {role: "bot", content: res}])
+            setBotCallStarted(false);
+        }
+
+        botRes();
+
+    },[botCallStarted])
+
+    useEffect(()=>{
+        bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+    },[conversation, botCallStarted])
 
     const handleKeyUp = (e) => {
         if (e.key === "Enter"){
             if (botCallStarted) return
             setConversation((prev) => [...prev, {role: "user", content: inputValue}]);
             setInputValue("");
+            setBotCallStarted(true);
         }
     }
 
@@ -37,6 +57,7 @@ export default function ExtendedChat(){
                     {/* <UserMessage message="Hur mycket lön förväntar du dig?"/>
                     <BotMessage message="30k - 40k kr dasjkndasj asd asd sdasd asd asdd asd as das asd as das ds dsdasndjkasnd ns djk asj j asd jkasdjk "/>
                     <UserMessage message="Hur mycket lön förväntar du dig?  jk njk  hjnka hjkx ashjk cashjik cjk nk j vsdfjk dfjo  j bjkl  jkml sjkl vdfjkl fjkl vfjkl f jl f jkl fjkl fdjkl fg dfjkl dfjkl "/> */}
+                    <div ref={bottomRef}></div>
                 </>
             ) : (
                 <div className={`grid items-center text-center p-4`}>
@@ -59,6 +80,7 @@ export default function ExtendedChat(){
                 if (botCallStarted) return
                 setConversation((prev) => [...prev, {role: "user", content: inputValue}]);
                 setInputValue("");
+                setBotCallStarted(true);
                 }} >
                 <Send className="text-black h-5 w-5"/>
             </button>
