@@ -43,7 +43,7 @@ Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integr
 ## 🎨 FAS 2 – Design & användarupplevelse
 
 - [ ] Förbättra UI med Framer Motion
-- [ ] Implementera Dark Mode
+- [ ] Implementera Light Mode
 - [x] Förbättra responsivitet och prestanda
 - [ ] Finputsning av typografi och färger
 
