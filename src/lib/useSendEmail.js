@@ -1,5 +1,11 @@
 import emailjs from '@emailjs/browser';
 
+/**
+ * Send an email using EmailJS with the provided template parameters.
+ *
+ * @param {Object} params - Key/value pairs mapped to the EmailJS template variables.
+ * @returns {boolean} `true` if the email was sent successfully, `false` otherwise.
+ */
 export default async function useSendEmail(params) {
   try {
     const response = await emailjs.send(

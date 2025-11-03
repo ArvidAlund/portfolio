@@ -1,3 +1,12 @@
+/**
+ * Render an icon link with a hover tooltip.
+ *
+ * @param {string} name - Text displayed inside the tooltip.
+ * @param {string} href - Destination URL for the anchor element.
+ * @param {import('react').ReactNode} svg - SVG node or element rendered as the icon.
+ * @param {boolean} [targetBlank=true] - If `true`, the link opens in a new tab; if `false`, it opens in the same tab.
+ * @returns {JSX.Element} The anchor element containing the icon and its hover tooltip.
+ */
 export default function IconWTooltip({ name, href, svg, targetBlank = true }) {
   return (
     <a
