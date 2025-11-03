@@ -2,6 +2,7 @@
 
 import { SendHorizonal } from "lucide-react";
 import { useEffect, useState } from "react";
+import ContactIcons from "../components/contact";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", content: "" });
@@ -60,6 +61,7 @@ export default function Contact() {
             </div>
           </button>
         </form>
+        <ContactIcons/>
       </main>
     </div>
   );

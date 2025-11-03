@@ -1,7 +1,7 @@
 import { FileDown, Mail } from "lucide-react"
 import IconWTooltip from "./iconWTooltip"
 
-export default function Contact(){
+export default function ContactIcons(){
     return <div className="flex h-10 items-center gap-6 mt-8">
           <button className="flex border border-neutral-500 p-2 rounded-lg w-25 justify-between cursor-pointer transition-all duration-200 hover:bg-neutral-900">
             <p className="font-bold">CV</p> 
@@ -28,8 +28,9 @@ export default function Contact(){
           />
           <IconWTooltip 
           name="Mail"
-          href="mailto:arvid.alund@gmail.com"
+          href="/contact"
           svg={<Mail/>}
+          targetBlank={false}
           />
         </div>
 }
