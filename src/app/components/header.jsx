@@ -15,7 +15,6 @@ export default function Header(){
             <div className="flex gap-4 sm:gap-8 [&>a]:transition-all [&>a]:duration-200 text-[#86888e] [&>a]:hover:text-white">
                 <Link href="/">Hem</Link>
                 <Link href="/projects">Project</Link>
-                <Link href="/blog">Blog</Link>
                 <Link href="/contact">Kontakt</Link>
             </div>
             <div>
