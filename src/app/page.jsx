@@ -1,6 +1,8 @@
 import ContactIcons from "./components/contact"
 import Experience from "./components/experience/experience"
 import TechStack from "./components/stack"
+import RenderProjects from "./components/projects/renderProjects"
+import { ArrowRight } from "lucide-react"
 
 /**
  * Renders the home page layout: a two-column introduction with name, brief bio and contact icons on the left, a profile image on the right, followed by experience and tech stack sections.
@@ -33,6 +35,14 @@ export default function Home() {
 
 
     <TechStack/>
+
+    <section className="mt-20">
+      <div className="flex justify-between items-center">
+        <h3 className="text-4xl font-bold font-caveat tracking-wider mb-8">Project</h3>
+        <a href="/projects" className="flex items-center justify-center gap-1"><p>Se fler</p> <ArrowRight/></a>
+      </div>
+      <RenderProjects num={2}/>
+    </section>
     </main>
   </div>
 }

@@ -1,4 +1,4 @@
-let cachedResponses = null;
+let cachedResponses = null; 
 
 export default async function getChatResponse(question) {
 
