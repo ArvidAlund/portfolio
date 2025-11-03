@@ -3,21 +3,31 @@
 import { SendHorizonal } from "lucide-react";
 import { useEffect, useState } from "react";
 import ContactIcons from "../components/contact";
+import useSendEmail from "@/lib/useSendEmail";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", content: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [buttonActive, setButtonActive] = useState(false);
+  const [sendSuccess, setSendSuccess] = useState();
 
   useEffect(() => {
-    const isActive = formData.name && formData.email && formData.content;
+    const isActive = formData.name && formData.email && formData.message;
     setButtonActive(!!isActive);
   }, [formData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!buttonActive) return;
-    console.log("Skickar meddelande:", formData);
-    // Här kan du lägga till fetch till din API-route
+
+    const sendEmail = async () => {
+      const res = await useSendEmail(formData)
+
+      setSendSuccess(res);
+
+      setFormData({ name: "", email: "", message: "" })
+    }
+    
+    sendEmail();
   };
 
   return (
@@ -32,6 +42,7 @@ export default function Contact() {
               value={formData.name}
               onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
               className="border p-2 rounded-lg"
+              required
             />
             <input
               type="email"
@@ -39,12 +50,14 @@ export default function Contact() {
               value={formData.email}
               onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
               className="border p-2 rounded-lg"
+              required
             />
             <textarea
               placeholder="Meddelande"
-              value={formData.content}
+              value={formData.message}
               className="col-span-2 min-h-[120px] border p-2 rounded-lg"
-              onChange={(e) => setFormData((prev) => ({ ...prev, content: e.target.value }))}
+              onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+              required
             />
           </div>
           <button
@@ -60,6 +73,12 @@ export default function Contact() {
               <SendHorizonal className={`${buttonActive ? "text-black" : "text-white"} transition-all duration-200`} />
             </div>
           </button>
+          {sendSuccess !== undefined && !sendSuccess && (
+            <p className="text-red-500 text-center mt-2">Något gick fel när medelandet skulle skickas. försök igen senare eller skriv på linkedin</p>
+          )}
+          {sendSuccess !== undefined && sendSuccess && (
+            <p className="text-green-500 text-center mt-2">Ditt medelande har skickats!</p>
+          )}
         </form>
         <ContactIcons/>
       </main>
