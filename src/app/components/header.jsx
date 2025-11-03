@@ -1,10 +1,15 @@
 "use client"
 import Link from "next/link"
 import { Bot, BotOff } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { emitEvent } from "../utils/eventbus"
 
 export default function Header(){
     const [botActive, setBotActive] = useState(true);
+
+    useEffect(()=>{
+        emitEvent("botActive", botActive)
+    },[botActive])
     return <header className="sticky top-0 z-50 bg-background/75 backdrop-blur-sm">
         <nav className="mx-auto max-w-3xl px-8 py-6 flex justify-between">
             <div className="flex gap-4 sm:gap-8 [&>a]:transition-all [&>a]:duration-200 text-[#86888e] [&>a]:hover:text-white">
