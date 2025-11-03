@@ -66,7 +66,7 @@
     },
     {
       "inputs": ["har du github", "visa github", "github profil"],
-      "reply": "Japp! Du hittar mig på GitHub via länken på sidan 🔗 Där finns lite kod och projekt jag jobbat på!"
+      "reply": "Japp! Du hittar mig på <a href=\"https://github.com/ArvidAlund\" target=\"_blank\">GitHub</a> via länken på sidan 🔗 Där finns lite kod och projekt jag jobbat på!"
     },
     {
       "inputs": ["roligt", "haha", "lol", "😂"],
