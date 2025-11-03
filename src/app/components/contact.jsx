@@ -6,12 +6,14 @@ import IconWTooltip from "./iconWTooltip"
  *
  * @returns {JSX.Element} A div containing the CV button and three contact icons (GitHub, LinkedIn, Mail).
  */
-export default function ContactIcons(){
-    return <div className="flex h-10 items-center gap-6 mt-8">
-          <button className="flex border border-neutral-500 p-2 rounded-lg w-25 justify-between cursor-pointer transition-all duration-200 hover:bg-neutral-900">
-            <p className="font-bold">CV</p> 
-            <FileDown/>
-          </button>
+export default function ContactIcons({cv = false}){
+    return <div className="flex h-10 items-center gap-6">
+          {cv && (
+            <button className="flex border border-neutral-500 p-2 rounded-lg w-25 justify-between cursor-pointer transition-all duration-200 hover:bg-neutral-900">
+              <p className="font-bold">CV</p> 
+              <FileDown/>
+            </button>
+          )}
           <IconWTooltip 
           name="GitHub" 
           href="https://github.com/ArvidAlund" 

@@ -2,7 +2,6 @@
 
 import { SendHorizonal } from "lucide-react";
 import { useEffect, useState } from "react";
-import ContactIcons from "../components/contact";
 import useSendEmail from "@/lib/useSendEmail";
 
 /**
@@ -87,7 +86,6 @@ export default function Contact() {
             <p className="text-green-500 text-center mt-2">Ditt medelande har skickats!</p>
           )}
         </form>
-        <ContactIcons/>
       </main>
     </div>
   );
