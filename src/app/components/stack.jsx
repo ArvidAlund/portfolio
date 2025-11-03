@@ -16,7 +16,7 @@ export default function TechStack(){
     }
 
     return <section className="mt-20">
-        <h3 className="text-4xl font-bold font-caveat tracking-wider mb-8">Tech Stack</h3>
+        <h2 className="text-4xl font-bold font-caveat tracking-wider mb-8">Tech Stack</h2>
         <div className="border border-neutral-800 min-h-20 rounded-lg mt-2 shadow-[0_0_5px_0_oklch(25%_0_0)]">
             <h4 className="mt-5 p-4 font-bold text-xl">Frontend</h4>
             <hr className="border-neutral-800"/>

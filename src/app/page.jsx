@@ -29,7 +29,7 @@ export default function Home() {
         </div> 
 
         <div className="w-full justify-center hidden sm:flex">
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHaUFzbY8CV2A/profile-displayphoto-scale_200_200/B4DZjqPx88GkAg-/0/1756276663263?e=1763596800&v=beta&t=8AuP6QKf7C8hYLrhmsePipL7ANJZvsDw4Ga8uDQBvBc" alt="Profile picture" className="rounded h-full object-cover"/>
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHaUFzbY8CV2A/profile-displayphoto-scale_200_200/B4DZjqPx88GkAg-/0/1756276663263?e=1763596800&v=beta&t=8AuP6QKf7C8hYLrhmsePipL7ANJZvsDw4Ga8uDQBvBc" alt="Profile picture" className="rounded h-full object-cover shadow-[0_0_5px_0_oklch(25%_0_0)]"/>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ export default function Home() {
 
     <section className="mt-20">
       <div className="flex justify-between items-center">
-        <h3 className="text-4xl font-bold font-caveat tracking-wider mb-8">Project</h3>
+        <h2 className="font-caveat tracking-wider mb-8">Project</h2>
         <a href="/projects" className="flex items-center justify-center gap-1"><p>Se fler</p> <ArrowRight/></a>
       </div>
       <RenderProjects num={2}/>

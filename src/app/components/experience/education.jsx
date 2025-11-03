@@ -38,7 +38,7 @@ export default function Education(){
             {edu.startdate} – {edu.enddate}
           </p>
           <a href={edu.websiteurl} target="_blank" className="h-10 rounded-full absolute -left-15 top-5.5 overflow-hidden"><img src={edu.logo} alt={edu.title} className="h-full object-cover" /></a>
-          <h3 className="font-semibold">{edu.title}</h3>
+          <h3 className="font-semibold !m-0">{edu.title}</h3>
           <p className="text-sm text-neutral-500">{edu.undertitle}</p>
           <ul className="list-disc text-neutral-300 list-outside ml-4 mt-2">
             {edu.bulletpoints.map((point, index) => (
