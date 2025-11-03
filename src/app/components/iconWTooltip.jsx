@@ -1,8 +1,8 @@
-export default function IconWTooltip({ name, href, svg }) {
+export default function IconWTooltip({ name, href, svg, targetBlank = true }) {
   return (
     <a
       href={href}
-      target="_blank"
+      target={`${targetBlank ? "_blank" : ""}`}
       rel="noopener noreferrer"
       className="group relative inline-block w-6 h-6 text-white hover:text-neutral-400 transition-colors"
     >

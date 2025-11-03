@@ -1,4 +1,4 @@
-import Contact from "./components/contact"
+import ContactIcons from "./components/contact"
 import Experience from "./components/experience/experience"
 import TechStack from "./components/stack"
 
@@ -17,7 +17,7 @@ export default function Home() {
             />
           </h4>
           <p className="mt-4 text-sm">Fullstack JS-utvecklare med fokus på React och API:er.</p>
-          <Contact/>
+          <ContactIcons />
         </div> 
 
         <div className="w-full flex justify-center">
