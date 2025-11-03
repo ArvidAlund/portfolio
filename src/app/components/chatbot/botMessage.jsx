@@ -16,7 +16,7 @@ export default function BotMessage({message}){
                 <span className="animate-bounce h-2 aspect-square rounded-full bg-white" style={{ animationDelay: "0.66s" }}></span>
             </div>
         ) : (
-            <p className="m-2 p-2 border rounded w-fit max-w-[80%] whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: clean }} />
+            <p className="m-2 p-2 border rounded w-fit h-fit max-w-[80%] whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: clean }} />
         )}
     </div>
 }
