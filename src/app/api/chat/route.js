@@ -1,5 +1,6 @@
 import OpenAI from "openai";
-import aboutData from "@/app/lib/about.json" assert { type: "json" };
+import path from "path";
+import fs from "fs";
 
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -7,7 +8,18 @@ const client = new OpenAI({
 
 export async function POST(req) {
   try {
+    console.log("📩 Request mottagen...");
+
     const { message } = await req.json();
+    console.log("🗣️ User message:", message);
+
+    const filePath = path.join(process.cwd(), "public", "about.json");
+    const aboutData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    console.log("📘 about.json laddad:", Object.keys(aboutData));
+
+    if (!process.env.OPENAI_API_KEY) {
+      throw new Error("❌ OPENAI_API_KEY saknas i environment variables!");
+    }
 
     const aboutSummary = `
       Namn: ${aboutData.name || "Arvid Ålund"}
@@ -17,6 +29,7 @@ export async function POST(req) {
       Ton: naturlig, personlig, professionell.
     `;
 
+    console.log("🚀 Skickar förfrågan till OpenAI...");
     const response = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
@@ -41,14 +54,19 @@ export async function POST(req) {
     });
 
     const reply = response.choices[0].message.content;
+    console.log("✅ GPT-svar:", reply);
+
     return new Response(JSON.stringify({ reply }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error(error);
+    console.error("💥 FEL I POST-FUNKTIONEN:", error);
     return new Response(
-      JSON.stringify({ error: "Något gick fel med GPT-anropet." }),
+      JSON.stringify({ error: "Något gick fel med GPT-anropet.",
+        stack: error.stack,
+        reply: "Hmm, jag är inte säker på hur jag ska svara på det där just nu 🤔"
+      }),
       { status: 500 }
     );
   }
