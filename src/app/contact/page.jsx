@@ -5,6 +5,13 @@ import { useEffect, useState } from "react";
 import ContactIcons from "../components/contact";
 import useSendEmail from "@/lib/useSendEmail";
 
+/**
+ * Renders the contact page with name, email, and message fields and UI for sending a message.
+ *
+ * The submit button becomes enabled when all fields have values. Submitting the form sends the current form data via the `useSendEmail` hook, resets the inputs, and displays a success or error message.
+ *
+ * @returns {JSX.Element} The contact form UI.
+ */
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [buttonActive, setButtonActive] = useState(false);
@@ -35,28 +42,25 @@ export default function Contact() {
       <main className="grow">
         <h1 className="text-5xl font-bold font-caveat tracking-wider mb-10">Kontakta mig</h1>
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col sm:grid sm:grid-cols-2 gap-5 *:border-neutral-700">
+          <div className="grid grid-cols-2 gap-5 *:border-neutral-700">
             <input
               type="text"
               placeholder="Namn"
-              name="name"
               value={formData.name}
               onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-              className="border p-2 rounded-lg h-12"
+              className="border p-2 rounded-lg"
               required
             />
             <input
               type="email"
               placeholder="Email"
-              name="email"
               value={formData.email}
               onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-              className="border p-2 rounded-lg h-12"
+              className="border p-2 rounded-lg"
               required
             />
             <textarea
               placeholder="Meddelande"
-              name="message"
               value={formData.message}
               className="col-span-2 min-h-[120px] border p-2 rounded-lg"
               onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
