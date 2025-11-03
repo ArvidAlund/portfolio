@@ -20,7 +20,7 @@ export default function TechStack(){
         <div className="border border-neutral-800 min-h-20 rounded-lg mt-2 shadow-[0_0_5px_0_oklch(25%_0_0)]">
             <h5 className="mt-5 p-4 font-bold text-xl">Frontend</h5>
             <hr className="border-neutral-800"/>
-            <div className="flex m-4 justify-between">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] m-4 gap-2">
                 {stackList.frontend.map((item, i) => (
                     <div key={i} className="flex flex-col items-center justify-center">
                         <img src={item.src} alt="Icon" className="h-8"/>
@@ -56,7 +56,7 @@ export default function TechStack(){
 
             <h5 className="mt-5 p-4 font-bold text-xl">Verktyg</h5>
             <hr className="border-neutral-800"/>
-            <div className="flex m-4 justify-between">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] m-4 gap-2">
                 {stackList.tools.map((item, i) => (
                     <div key={i} className="flex flex-col items-center justify-center">
                         <img
