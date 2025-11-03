@@ -17,8 +17,8 @@ export default async function getChatResponse(question) {
     r.inputs.some(i => normalized.includes(i))
   );
 
-  if (!match) return null;
-  if (Array.isArray(match.reply))
-    return match.reply[Math.floor(Math.random() * match.reply.length)];
-  return match.reply;
+  if (match){
+    if (Array.isArray(match.reply)) return match.reply[Math.floor(Math.random() * match.reply.length)];
+    return match.reply;
+  };
 }
