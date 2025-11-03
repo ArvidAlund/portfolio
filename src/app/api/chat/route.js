@@ -6,8 +6,25 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+const RATE_LIMIT_MS = 3000;
+const lastCallPerIP = {};
+
 export async function POST(req) {
   try {
+    const ip = req.headers.get("x-forwarded-for") || "unknown";
+    
+    const now = Date.now();
+    if (lastCallPerIP[ip] && now - lastCallPerIP[ip] < RATE_LIMIT_MS) {
+      const responses = [
+        "⏱ Whoops! Tar en kort paus från GPT här – vänta lite så är jag tillbaka!",
+        "😅 Easy there! Ge mig 3 sekunder att andas innan vi fortsätter.",
+        "🚦 Stoppljus! Chatten behöver en liten paus. Testa igen om några sekunder.",
+        "🐢 Slow down! Jag behöver ladda batterierna innan jag kan svara igen.",
+        "🛑 Håll dig lugn! Jag jobbar på högvarv men behöver en snabb paus – försök igen snart!"
+      ]
+      return new Response(JSON.stringify({ error: "⏱ För många anrop, försök igen snart.", reply: responses[Math.floor(Math.random() * responses.length)] }), { status: 429 });
+    }
+    lastCallPerIP[ip] =  now;
     console.log("📩 Request mottagen...");
 
     const { message } = await req.json();
