@@ -25,6 +25,7 @@ Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integr
 | [Tailwind CSS](https://tailwindcss.com/) | Styling                                           |
 | [OpenAI](https://platform.openai.com/)   | AI-anrop (ChatGPT)                                |
 | [Vercel](https://vercel.com/)            | Hosting & deploy                                  |
+| [EmailJS](https://www.emailjs.com/)      | Mail hantering                                    |
 
 ---
 
@@ -33,9 +34,9 @@ Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integr
 ## ✅ FAS 1 – Grundläggande struktur
 
 - [x] Initiera projekt med Next.js och Tailwind CSS
-- [ ] Skapa sidor: `Home`, `About`, `Projects`, `Contact`
-- [ ] Bygga layout och navigation
-- [ ] Implementera enkel ChatGPT-integration via API-route
+- [x] Skapa sidor: `Home`, `Projects`, `Contact`
+- [x] Bygga layout och navigation
+- [x] Implementera enkel ChatGPT-integration via API-route
 
 ---
 
@@ -52,7 +53,6 @@ Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integr
 
 - [ ] Utöka ChatGPT-komponenten med historik och "typing" animation
 - [ ] Låta AI:n svara på frågor om mina projekt och erfarenheter
-- [ ] Möjlighet att generera beskrivningar automatiskt
 
 ---
 
@@ -68,7 +68,6 @@ Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integr
 
 - [ ] AI-driven CV-sektion
 - [ ] "Chat with my portfolio"–funktion
-- [ ] Generera projektbilder med DALL·E
 - [ ] Flerspråkigt stöd (svenska/engelska)
 
 ---
