@@ -20,7 +20,7 @@ export default function ProjectContainer({title, summary, img, stack, gitrepo, w
             <h5 className="font-bold text-lg">{title}</h5>
             <p className="text-xs text-neutral-300">{summary}</p>
         </div>
-        <div className="flex gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-8">
             {stack.map((item, i) => (
                 <p key={i} className="text-[0.75rem] bg-neutral-700 p-1 rounded">{item}</p>
             ))}

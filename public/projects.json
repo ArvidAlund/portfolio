@@ -8,12 +8,12 @@
             "gitrepo":"https://github.com/ArvidAlund/e-commerce-platform-backend", 
             "website":""
         },{
-            "title":"e-commerce-platform-backend", 
-            "summary":"Backend för e-handel byggt med Node.js, Express och PostgreSQL, med JWT-autentisering och REST-API för produkter, kategorier och merchants.", 
-            "img":"./img/projects/eComBackend.png", 
-            "stack":["Node", "PostgreSQL", "Express"], 
-            "gitrepo":"https://github.com/ArvidAlund/e-commerce-platform-backend", 
-            "website":""
+            "title": "next-budget-app",
+            "summary": "En modern budgetapp byggd med Next.js 15, React 19 och Tailwind CSS 4. Hanterar inkomster, utgifter och kategorier med Supabase-autentisering, OCR-stöd och smarta UI-komponenter.",
+            "img": "./img/projects/nextBudgetApp.png",
+            "stack": ["Next.js", "React", "Tailwind", "Supabase", "Tesseract.js", "TypeScript"],
+            "gitrepo": "https://github.com/ArvidAlund/next-budget-app",
+            "website": "https://next-budget-app-theta.vercel.app/"
         }
     ]
 }
