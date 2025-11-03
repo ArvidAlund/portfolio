@@ -1,5 +1,16 @@
 import { Globe } from "lucide-react"
 
+/**
+ * Render a card that displays a project's image, title, summary, technology stack, and optional website and repository links.
+ *
+ * @param {string} title - Project title displayed prominently.
+ * @param {string} summary - Short project description shown under the title.
+ * @param {string} img - Image URL used for the project thumbnail (renders with alt "Project Image").
+ * @param {string[]} stack - Array of technology names rendered as small chips.
+ * @param {string} gitrepo - URL of the project's Git repository; when falsy or an empty string the repo link is omitted.
+ * @param {string} [website=""] - URL of the live project; when falsy or an empty string the website link is omitted.
+ * @returns {JSX.Element} The rendered project card element.
+ */
 export default function ProjectContainer({title, summary, img, stack, gitrepo, website=""}){
     return <div className="border border-neutral-700 p-2 w-full shadow-[0_0_5px_0_oklch(25%_0_0)] rounded-lg overflow-hidden">
         <div className="w-3/4 flex m-auto">
