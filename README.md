@@ -44,7 +44,7 @@ Sidan presenterar mina projekt, erfarenheter och har en inbyggd **ChatGPT-integr
 
 - [ ] Förbättra UI med Framer Motion
 - [ ] Implementera Dark Mode
-- [ ] Förbättra responsivitet och prestanda
+- [x] Förbättra responsivitet och prestanda
 - [ ] Finputsning av typografi och färger
 
 ---

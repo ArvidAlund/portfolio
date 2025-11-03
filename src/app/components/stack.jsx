@@ -18,7 +18,7 @@ export default function TechStack(){
     return <section className="mt-20">
         <h3 className="text-4xl font-bold font-caveat tracking-wider mb-8">Tech Stack</h3>
         <div className="border border-neutral-800 min-h-20 rounded-lg mt-2 shadow-[0_0_5px_0_oklch(25%_0_0)]">
-            <h5 className="mt-5 p-4 font-bold text-xl">Frontend</h5>
+            <h4 className="mt-5 p-4 font-bold text-xl">Frontend</h4>
             <hr className="border-neutral-800"/>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] m-4 gap-2">
                 {stackList.frontend.map((item, i) => (
@@ -29,7 +29,7 @@ export default function TechStack(){
                 ))}
             </div>
 
-            <h5 className="mt-5 p-4 font-bold text-xl">Backend</h5>
+            <h4 className="mt-5 p-4 font-bold text-xl">Backend</h4>
             <hr className="border-neutral-800"/>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] m-4 gap-2">
                 {stackList.backend.map((item, i) => (
@@ -54,7 +54,7 @@ export default function TechStack(){
                 ))}
             </div>
 
-            <h5 className="mt-5 p-4 font-bold text-xl">Verktyg</h5>
+            <h4 className="mt-5 p-4 font-bold text-xl">Verktyg</h4>
             <hr className="border-neutral-800"/>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] m-4 gap-2">
                 {stackList.tools.map((item, i) => (

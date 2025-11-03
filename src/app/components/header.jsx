@@ -19,7 +19,7 @@ export default function Header(){
                 <Link href="/contact">Kontakt</Link>
             </div>
             <div>
-                <button onClick={() => setBotActive(!botActive)} className="cursor-pointer">
+                <button onClick={() => setBotActive(!botActive)} className="cursor-pointer" aria-label="open/close chatwindow">
                     {botActive ? 
                     <Bot className="text-[#86888e] transition-all duration-200 hover:text-white"/> : 
                     <BotOff className="text-[#86888e] transition-all duration-200 hover:text-white"/>}

@@ -35,25 +35,28 @@ export default function Contact() {
       <main className="grow">
         <h1 className="text-5xl font-bold font-caveat tracking-wider mb-10">Kontakta mig</h1>
         <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-2 gap-5 *:border-neutral-700">
+          <div className="flex flex-col sm:grid sm:grid-cols-2 gap-5 *:border-neutral-700">
             <input
               type="text"
               placeholder="Namn"
+              name="name"
               value={formData.name}
               onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-              className="border p-2 rounded-lg"
+              className="border p-2 rounded-lg h-12"
               required
             />
             <input
               type="email"
               placeholder="Email"
+              name="email"
               value={formData.email}
               onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-              className="border p-2 rounded-lg"
+              className="border p-2 rounded-lg h-12"
               required
             />
             <textarea
               placeholder="Meddelande"
+              name="message"
               value={formData.message}
               className="col-span-2 min-h-[120px] border p-2 rounded-lg"
               onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}

@@ -8,14 +8,14 @@ export default function Home() {
       <div className="sm:grid sm:grid-cols-[60%_40%]">
         <div className="">
           <h1 className="text-5xl font-bold mb-2 font-caveat tracking-wider">Tja Arvid här. 👋</h1>
-          <h4 className="flex items-center gap-2 text-lg font-medium">
+          <h5 className="flex items-center gap-2 text-lg font-medium">
             19 år • Fullstackutvecklare från Nyköping
             <img
               src="https://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/512/Sweden-icon.png"
               alt="Swedish flag"
-              className="h-5 w-auto object-cover"
+              className="hidden sm:block h-5 w-auto object-cover"
             />
-          </h4>
+          </h5>
           <p className="mt-4 text-sm">Fullstack JS-utvecklare med fokus på React och API:er.</p>
           <ContactIcons />
         </div> 
