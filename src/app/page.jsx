@@ -40,7 +40,7 @@ export default function Home() {
 
     <section className="mt-20">
       <div className="flex justify-between items-center">
-        <h2 className="font-caveat tracking-wider mb-8">Project</h2>
+        <h2 className="font-caveat tracking-wider mb-8">Projekt</h2>
         <a href="/projects" className="flex items-center justify-center gap-1"><p>Se fler</p> <ArrowRight/></a>
       </div>
       <RenderProjects num={2}/>
