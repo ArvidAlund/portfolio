@@ -16,7 +16,7 @@ export default function ProjectContainer({title, summary, img, stack, gitrepo, w
     const [imgExtended, setImgExtended] = useState(false)
     return <div className="border border-neutral-700 p-2 w-full shadow-[0_0_5px_0_oklch(25%_0_0)] rounded-lg flex flex-col">
         <div className="w-fit flex m-[0_auto] h-40">
-            <img src={img} alt="Project Image" className={`h-full object-contain ${imgExtended ? "absolute top-1/2 left-1/2 w-full sm:w-3/4 -translate-1/2 z-100" : "scale-100"}`} onClick={() => setImgExtended(!imgExtended)}/>
+            <img src={img} alt="Project Image" className={`h-full object-contain ${imgExtended ? "fixed top-1/2 left-1/2 w-full sm:w-3/4 -translate-1/2 z-120" : "scale-100"}`} onClick={() => setImgExtended(!imgExtended)}/>
         </div>
         <div className="mt-2 mb-8 h-25">
             <h5 className="font-bold text-lg">{title}</h5>
