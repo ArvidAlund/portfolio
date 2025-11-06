@@ -63,8 +63,8 @@ export default function ExtendedChat(){
                 <div className={`grid items-center text-center p-4 grid-rows-[70%_30%] h-full`}>
                     <h6 className="font-bold">Skriv ett medelande för att starta samtalet</h6>
                     <div className="text-neutral-500">
-                        <p>Drivs av</p>
-                        <a href="https://github.com/ArvidAlund/QueryMe" className="underline">QueryMe</a>
+                        <p className="text-sm">Drivs av</p>
+                        <a href="https://github.com/ArvidAlund/QueryMe" target="_blank" className="underline">QueryMe</a>
                     </div>
                 </div>
             )}
