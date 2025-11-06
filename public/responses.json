@@ -83,9 +83,9 @@
     {
       "inputs": ["lön", "lönen", "vad tjänar man", "hur mycket får man", "vad kan man förvänta sig i lön", "salary"],
       "reply": [
-        "Jag tänker att en rimlig startlön för en ny fullstackutvecklare ligger runt **33–37 000 kr/mån**, beroende på erfarenhet och var man jobbar 💻",
+        "Jag tänker att en rimlig startlön för en ny fullstackutvecklare ligger runt **35–40 000 kr/mån**, beroende på erfarenhet och var man jobbar 💻",
         "Jag siktar på en lön någonstans runt **35 000 kr/mån** som ny i branschen — det känns realistiskt för en junior fullstackare i Sverige 👌",
-        "Jag skulle säga mellan **32–38 000 kr/mån** är ett bra spann för en nyutexad utvecklare, lite beroende på företag och stad 🏙️"
+        "Jag skulle säga mellan **35–40 000 kr/mån** är ett bra spann för en nyutexad utvecklare, lite beroende på företag och stad 🏙️"
       ]
     }
   ]
