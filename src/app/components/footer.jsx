@@ -9,7 +9,7 @@ export default function Footer(){
             <a href="/privacy" className="pl-1 hover:underline">sekretesspolicy</a>
         </div>
         <div className="hidden sm:block">
-            <ContactIcons/>
+            <ContactIcons cv={false}/>
         </div>
     </footer>
 }
