@@ -47,7 +47,7 @@ export default function ChatBot() {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
           >
-            <ExtendedChat />
+            <ExtendedChat/>
           </motion.div>
         )}
       </AnimatePresence>

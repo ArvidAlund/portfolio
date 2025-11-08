@@ -4,17 +4,18 @@ import { useState, useEffect, useRef } from "react";
 import BotMessage from "./botMessage";
 import UserMessage from "./userMessage";
 import getChatResponse from "@/lib/getChatResponse";
-
+let conversationCache = [];
 
 export default function ExtendedChat(){
     const [inputValue, setInputValue] = useState("");
     const [convStarted, setConvStarted] = useState(false);
-    const [conversation, setConversation] = useState([]);
+    const [conversation, setConversation] = useState(conversationCache);
     const [botCallStarted, setBotCallStarted] = useState(false);
     const bottomRef = useRef(null);
 
     useEffect(()=>{
         if (conversation.length !== 0) setConvStarted(true);
+        conversationCache = conversation;
     },[conversation])
 
     useEffect(()=>{
@@ -44,7 +45,7 @@ export default function ExtendedChat(){
     }
 
     return <div>
-        <section id="chatWindow" className="h-70 overflow-y-scroll">
+        <section id="chatWindow" className={`h-70 overflow-y-scroll`}>
             {convStarted ? (
                 <>
                     {conversation.map((message, index) => {
