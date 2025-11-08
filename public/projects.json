@@ -1,6 +1,14 @@
 {
     "projects":[ 
         {
+            "title": "QueryMe",
+            "summary": "En personlig AI-chatt byggd med Express, Supabase och OpenAI API som svarar på frågor om mig och mina projekt. Utvecklad för att skapa en interaktiv och intelligent upplevelse på min portfoliosida.",
+            "img": "./img/projects/queryme.png",
+            "stack": ["Node.js", "Express", "Supabase", "OpenAI API", "GitHub API"],
+            "gitrepo": "https://github.com/ArvidAlund/QueryMe",
+            "website": "https://chat.arvidalud.com/"
+        },
+        {
             "title":"e-commerce-platform-backend", 
             "summary":"Backend för e-handel byggt med Node.js, Express och PostgreSQL, med JWT-autentisering och REST-API för produkter, kategorier och merchants.", 
             "img":"./img/projects/eComBackend.png", 
@@ -15,5 +23,6 @@
             "gitrepo": "https://github.com/ArvidAlund/next-budget-app",
             "website": "https://next-budget-app-theta.vercel.app/"
         }
+
     ]
 }
