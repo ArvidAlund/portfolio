@@ -45,7 +45,7 @@ export default function ExtendedChat(){
     }
 
     return <div>
-        <section id="chatWindow" className={`h-70 overflow-y-auto`}>
+        <section id="chatWindow" className={`h-100 sm:h-70 overflow-y-auto`}>
             {convStarted ? (
                 <>
                     {conversation.map((message, index) => {
@@ -70,7 +70,7 @@ export default function ExtendedChat(){
                 </div>
             )}
         </section>
-        <section id="input" className="h-15 flex justify-between border-t border-neutral-500 p-3 gap-2">
+        <section id="input" className="h-20 sm:h-15 flex justify-between border-t border-neutral-500 p-3 gap-2">
             <input type="text" 
             name="input" 
             placeholder="Fråga mig något..." 
