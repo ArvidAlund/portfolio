@@ -45,7 +45,7 @@ export default function ExtendedChat(){
     }
 
     return <div>
-        <section id="chatWindow" className={`h-70 overflow-y-scroll`}>
+        <section id="chatWindow" className={`h-70 overflow-y-auto`}>
             {convStarted ? (
                 <>
                     {conversation.map((message, index) => {
