@@ -1,3 +1,5 @@
+"use client"
+
 import { FileDown, Mail } from "lucide-react"
 import IconWTooltip from "./iconWTooltip"
 
@@ -7,9 +9,20 @@ import IconWTooltip from "./iconWTooltip"
  * @returns {JSX.Element} A div containing the CV button and three contact icons (GitHub, LinkedIn, Mail).
  */
 export default function ContactIcons({cv = false}){
+
+  const handleDownload = () =>{
+    const fileUrl = "ArvidAlund.pdf";
+    window.open(fileUrl , "_blank")
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = fileUrl;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
     return <div className="flex h-10 items-center gap-6">
           {cv && (
-            <button className="flex border border-neutral-500 p-2 rounded-lg w-25 justify-between cursor-pointer transition-all duration-200 hover:bg-neutral-900">
+            <button onClick={handleDownload} className="flex border border-neutral-500 p-2 rounded-lg w-25 justify-between cursor-pointer transition-all duration-200 hover:bg-neutral-900">
               <p className="font-bold">CV</p> 
               <FileDown/>
             </button>

@@ -24,7 +24,7 @@ export default function Home() {
           </h4>
           <p className="mt-4 text-sm">Fullstack JS-utvecklare med fokus på React och API:er.</p>
           <div className="mt-8">
-            <ContactIcons cv={false} />
+            <ContactIcons cv={true} />
           </div>
         </div> 
 
