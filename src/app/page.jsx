@@ -29,7 +29,7 @@ export default function Home() {
         </div> 
 
         <div className="w-full justify-center hidden sm:flex">
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHaUFzbY8CV2A/profile-displayphoto-scale_200_200/B4DZjqPx88GkAg-/0/1756276663263?e=1763596800&v=beta&t=8AuP6QKf7C8hYLrhmsePipL7ANJZvsDw4Ga8uDQBvBc" alt="Profile picture" className="rounded h-full object-cover shadow-[0_0_5px_0_oklch(25%_0_0)]"/>
+          <img src="https://avatars.githubusercontent.com/u/64034931?v=4" alt="Profile picture" className="rounded h-3/4 aspect-square object-cover shadow-[0_0_5px_0_oklch(25%_0_0)]"/>
         </div>
       </div>
 
