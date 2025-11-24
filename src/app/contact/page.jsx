@@ -2,7 +2,7 @@
 
 import { SendHorizonal } from "lucide-react";
 import { useEffect, useState } from "react";
-import useSendEmail from "@/lib/useSendEmail";
+import SendEmail from "@/lib/useSendEmail";
 
 /**
  * Renders the contact page with name, email, and message fields and UI for sending a message.
@@ -26,7 +26,7 @@ export default function Contact() {
     if (!buttonActive) return;
 
     const sendEmail = async () => {
-      const res = await useSendEmail(formData)
+      const res = await SendEmail(formData)
 
       setSendSuccess(res);
 
