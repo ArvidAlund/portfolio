@@ -1,6 +1,14 @@
 {
     "projects":[ 
         {
+            "title": "next-budget-app",
+            "summary": "En modern budgetapp byggd med Next.js 15, React 19 och Tailwind CSS 4. Hanterar inkomster, utgifter och kategorier med Supabase-autentisering, OCR-stöd och smarta UI-komponenter.",
+            "img": "./img/projects/nextBudgetApp.png",
+            "stack": ["Next.js", "React", "Tailwind", "Supabase", "Tesseract.js", "TypeScript"],
+            "gitrepo": "https://github.com/ArvidAlund/next-budget-app",
+            "website": "https://next-budget-app-theta.vercel.app/"
+        },
+        {
             "title": "QueryMe",
             "summary": "En personlig AI-chatt byggd med Express, Supabase och OpenAI API som svarar på frågor om mig och mina projekt. Utvecklad för att skapa en interaktiv och intelligent upplevelse på min portfoliosida.",
             "img": "./img/projects/queryme.png",
@@ -15,13 +23,6 @@
             "stack":["Node", "PostgreSQL", "Express"], 
             "gitrepo":"https://github.com/ArvidAlund/e-commerce-platform-backend", 
             "website":""
-        },{
-            "title": "next-budget-app",
-            "summary": "En modern budgetapp byggd med Next.js 15, React 19 och Tailwind CSS 4. Hanterar inkomster, utgifter och kategorier med Supabase-autentisering, OCR-stöd och smarta UI-komponenter.",
-            "img": "./img/projects/nextBudgetApp.png",
-            "stack": ["Next.js", "React", "Tailwind", "Supabase", "Tesseract.js", "TypeScript"],
-            "gitrepo": "https://github.com/ArvidAlund/next-budget-app",
-            "website": "https://next-budget-app-theta.vercel.app/"
         }
 
     ]

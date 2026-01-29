@@ -14,7 +14,7 @@ export default function ExtendedChat(){
     const bottomRef = useRef(null);
 
     useEffect(()=>{
-        if (conversation.length !== 0) setConvStarted(true);
+        if (conversation.length > 0) setConvStarted(true);
         conversationCache = conversation;
     },[conversation])
 

@@ -8,7 +8,7 @@
  */
 export default async function getChatResponse(question) {
 
-  const res = await fetch("https://chat.arvidalund.com/question", {
+  const res = await fetch("https://query-me-pied.vercel.app/question", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,6 +20,11 @@ export default async function getChatResponse(question) {
       }
     })
   });
+
+  if (!res.ok) {
+    console.error("Network response was not ok");
+    return "Något gick fel. Försök igen senare.";
+  }
 
   const data = await res.json();
 
